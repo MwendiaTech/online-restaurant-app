@@ -13,6 +13,13 @@ const MAPPING = {
   'paperplane.fill': 'send',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
+
+  // New mappings for our app
+  'list': 'list', // For meals list page
+  'plus': 'add', // For create meals page
+  'add-shopping-cart': 'shopping-cart', // For orders page
+  'credit-card': 'credit-card', // Added for checkout page
+
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],

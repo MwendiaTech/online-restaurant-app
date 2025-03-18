@@ -1,3 +1,4 @@
+// app/_layout.tsx
 import { Tabs } from 'expo-router';
 import React from 'react';
 import { Platform } from 'react-native';
@@ -26,20 +27,29 @@ export default function TabLayout() {
           default: {},
         }),
       }}>
+ 
       <Tabs.Screen
-        name="index"
+        name="meals"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Meals',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="list" color={color} />,
+        }}
+      />
+  
+      <Tabs.Screen
+        name="orders"
+        options={{
+          title: 'Orders',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="add-shopping-cart" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
-        }}
-      />
+          name="checkout"
+          options={{
+            title: 'Checkout',
+            tabBarIcon: ({ color }) => <IconSymbol size={28} name="credit-card" color={color} />,
+          }}
+        />
     </Tabs>
   );
 }
